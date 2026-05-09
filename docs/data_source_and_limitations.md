@@ -1,54 +1,44 @@
-﻿# 数据来源与解释边界说明
+# 数据来源与解释边界说明
 
-本文为项目辅助说明文档，用于解释项目文件、数据边界、复核过程或 AI 辅助方式。
+本文用于说明本项目的数据来源、公开仓库保留范围和解释边界。
 
-## 本文依据的文件
+## 项目性质
 
-- `docs/analysis_plan.md`
-- `README.md`
-- `portfolio/game_community_app_analysis_report.md`
-- `outputs/reports/cleaning_report.md`
-- `outputs/reports/review_analysis_summary.md`
-- `outputs/reports/keyword_analysis_summary.md`
-- `outputs/reports/download_analysis_summary.md`
-- `outputs/reports/version_analysis_summary.md`
-- `outputs/reports/four_source_evidence_chain_summary.md`
-- `data/raw/`
-- `data/cleaned/`
+本项目是个人学习型公开数据分析项目，主要用于练习数据清洗、公开信息整理、游戏社区 App 行业理解、用户评论与关键词观察、下载预估与版本日志的交叉观察，以及 AI / Codex 辅助下的文档审校和项目整理。
 
-## 文档目的
+本项目不代表官方数据或真实业务复盘，也不用于评价小黑盒、游民星空或相关公司的真实运营能力。
 
-本文集中说明项目使用的数据来源、清洗后文件路径和解释边界。所有结论均应保持在公开数据观察范围内，不应写成官方口径、真实用户规模或运营效果证明。
+## 数据来源
 
-## raw 数据来源
+本项目原始数据来自七麦苹果端公开导出数据和公开页面信息，主要包括：
 
-项目原始数据位于 `data/raw/`，当前文件包括：
+- App Store 公开评论。
+- App Store 关键词相关公开导出数据。
+- 七麦 iPhone 新增下载预估。
+- App Store 公开版本日志。
+- TGA 等外部事件和公开活动页面信息。
 
-- `data/raw/keywords_comparison.csv`
-- `data/raw/xhh_downloads.csv`
-- `data/raw/xhh_reviews.xlsx`
-- `data/raw/xhh_versions.csv`
-- `data/raw/ym_downloads.csv`
-- `data/raw/ym_reviews.xlsx`
-- `data/raw/ym_versions.csv`
+这些数据只适合作为公开观察入口，不等同于官方后台数据、真实用户行为数据或真实运营复盘数据。
 
-根据 `docs/analysis_plan.md` 和 `README.md`，这些数据来自七麦公开导出数据与 App Store 公开信息。
+## 公开仓库保留范围
 
-## cleaned 数据路径
+本公开仓库不包含完整 raw 数据，也不包含源项目中的归档、草稿、旧版报告、旧版 PPT、清理日志或过程检查文件。
 
-清洗后数据位于 `data/cleaned/`，当前文件包括：
+公开仓库仅保留：
 
-- `data/cleaned/cleaned_downloads.csv`
-- `data/cleaned/cleaned_keywords.csv`
-- `data/cleaned/cleaned_reviews.csv`
-- `data/cleaned/cleaned_versions.csv`
+- 项目报告 Markdown 与 PDF。
+- 展示用 PPT。
+- 报告所需的汇总表。
+- 报告引用的图表。
+- 主要数据处理与分析脚本。
+- 数据边界、AI 辅助、Excel/SQL 学习和报告生成说明文档。
 
-`outputs/reports/cleaning_report.md` 显示：
+不公开完整 raw 数据的原因包括：
 
-- `cleaned_keywords`：765 行，8 列。
-- `cleaned_downloads`：730 行，5 列。
-- `cleaned_reviews`：1659 行，9 列。
-- `cleaned_versions`：67 行，8 列。
+- App Store 评论文本可能包含用户表达、昵称或其他可识别信息。
+- 平台导出文件存在再分发边界。
+- 原始文件属于过程数据，不适合作为公开仓库展示内容。
+- 本仓库重点是展示学习过程、分析边界、汇总结果和文档表达，而不是分发原始数据。
 
 ## 评论数据限制
 
@@ -69,7 +59,7 @@
 - 搜索指数不等同真实流量。
 - 关键词排名不等同真实用户规模。
 - Top50 数量不代表运营能力强弱。
-- 关键词场景分类不应写成 ASO 优化。
+- 关键词场景分类不应写成 ASO 优化结论。
 - `keyword_count` 与 `core_clue_count` 应分开解释。
 
 正式报告中对关键词的使用方式是“主动需求：用户在寻找什么”。
@@ -78,7 +68,7 @@
 
 下载趋势来自七麦 iPhone 新增下载预估。它适合观察样本期内的波动背景，但存在限制：
 
-- 七麦下载量为第三方预估值。
+- 七麦下载量为第三方估算值。
 - 不能写成官方下载量。
 - 不能写成真实新增用户。
 - 不能证明活动、版本或内容带来下载变化。
@@ -100,7 +90,7 @@
 
 ## 外部事件 / TGA 信息限制
 
-正式报告加入了 TGA 事件窗口观察。该部分仅用于确认外部事件和公开活动线索存在，并结合七麦预估下载观察时间窗口。
+正式报告加入了 TGA 事件窗口观察。该部分只能用于确认外部事件和公开活动线索存在，并结合七麦预估下载观察时间窗口。
 
 限制包括：
 
@@ -113,7 +103,7 @@
 
 ## 四源观察链不能写成因果链
 
-本项目使用四类数据：评论、关键词、下载趋势、版本节奏。它们可以互相补充观察角度，但不能组成因果证明链。
+本项目使用四类公开数据：评论、关键词、下载趋势、版本节奏。它们可以互相补充观察角度，但不能组成因果证明链。
 
 可写：
 
@@ -128,11 +118,4 @@
 - “版本更新解决评论问题。”
 - “关键词证明真实用户需求规模。”
 - “下载峰值证明运营动作有效。”
-
-## 待人工确认事项
-
-- raw 数据的具体导出时间和导出人是否需要记录。
-- TGA 外部公开来源是否需要单独沉淀链接或截图。
-- 是否需要补充 App Store 原始页面来源说明。
-- 是否需要给 cleaned 数据补充字段字典。
 
