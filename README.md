@@ -14,7 +14,7 @@
 
 - PDF：[`portfolio/game_community_app_analysis_report.pdf`](portfolio/game_community_app_analysis_report.pdf)
 - Markdown：[`portfolio/game_community_app_analysis_report.md`](portfolio/game_community_app_analysis_report.md)
-- PPT：[`slides/game_community_app_analysis_presentation_v2.pptx`](slides/game_community_app_analysis_presentation_v2.pptx)
+- PPT：[`slides/game_community_app_analysis_presentation_v3.pptx`](slides/game_community_app_analysis_presentation_v3.pptx)
 
 当前项目报告建议优先阅读 PDF；Markdown 用于查看正文结构、图表引用和后续维护。
 
@@ -45,8 +45,10 @@
 
 ## 5. 项目文件结构
 
-主要目录说明：
+主要文件与目录说明：
 
+- `README.md`：公开仓库入口说明。
+- `requirements.txt`：脚本运行所需的基础 Python 依赖记录。
 - `portfolio/`：正式报告 Markdown 与 PDF。
 - `slides/`：展示用 PPT。
 - `docs/`：数据边界、AI 辅助、Excel/SQL 复核、报告生成与修订记录。
@@ -122,4 +124,3 @@ AI / Codex 是辅助工具，不是独立完成项目。关键数字、文件路
 - 在真实业务数据可用时，引入站内行为、留存、活动曝光、下载来源和客服工单等数据。
 - 增加用户访谈或定性反馈，对公开评论中出现的问题线索做进一步验证。
 - 为报告生成流程补充更完整的本地复现记录。
-

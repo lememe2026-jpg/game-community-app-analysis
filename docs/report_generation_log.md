@@ -10,7 +10,7 @@
 
 - `portfolio/game_community_app_analysis_report.md`
 - `portfolio/game_community_app_analysis_report.pdf`
-- `slides/game_community_app_analysis_presentation_v2.pptx`
+- `slides/game_community_app_analysis_presentation_v3.pptx`
 - `outputs/charts/`
 - `README.md`
 
@@ -34,32 +34,31 @@
 
 PDF 生成方式为基于 Markdown 转换 HTML，并通过 Microsoft Edge headless / DevTools `Page.printToPDF` 输出。最终版本使用内嵌图片方式，避免相对路径在 headless 环境中丢图；本轮未生成临时 HTML 文件。
 
-本轮报告修订性质主要是降低 AI 味和运营 SOP 味，将报告从“求职包装 / 运营建议清单”进一步调整为“个人学习型公开数据观察项目”。报告继续强调数据边界：公开评论、关键词、七麦 iPhone 新增下载预估和公开版本日志只作为观察链，不作为因果证明链。
+本轮报告修订性质主要是降低 AI 味和运营 SOP 味，将报告从过强展示和运营建议清单进一步调整为“个人学习型公开数据观察项目”。报告继续强调数据边界：公开评论、关键词、七麦 iPhone 新增下载预估和公开版本日志只作为观察链，不作为因果证明链。
 
 ## 当前展示 PPT
 
 当前展示 PPT 文件：
 
-- `slides/game_community_app_analysis_presentation_v2.pptx`
+- `slides/game_community_app_analysis_presentation_v3.pptx`
 
-PPT 用于辅助展示项目思路，不替代正式 PDF 报告。公开仓库不保留旧版 PPT 或过程检查文件。
+v3 已根据当前正式报告和 README 的“个人学习型公开数据观察项目”定位重做，用于辅助展示项目思路，不替代正式 PDF 报告。公开仓库不保留旧版 PPT 或过程检查文件。
 
 ## 正式报告使用图表清单
 
-当前正式 Markdown 报告引用以下图表：
+当前正式 Markdown 报告从 `portfolio/` 目录引用以下图表路径：
 
-- `outputs/charts/final_01_review_sentiment_structure.png`
-- `outputs/charts/final_03_xhh_negative_issue_categories.png`
-- `outputs/charts/final_06_keyword_operation_support_matrix.png`
-- `outputs/charts/final_09_download_monthly_compare.png`
-- `outputs/charts/final_11_version_monthly_updates.png`
-- `outputs/charts/final_14_tga_daily_window_compare.png`
+- `../outputs/charts/final_01_review_sentiment_structure.png`
+- `../outputs/charts/final_03_xhh_negative_issue_categories.png`
+- `../outputs/charts/final_06_keyword_operation_support_matrix.png`
+- `../outputs/charts/final_09_download_monthly_compare.png`
+- `../outputs/charts/final_11_version_monthly_updates.png`
+- `../outputs/charts/final_14_tga_daily_window_compare.png`
 
-这些图表不应移动，否则可能影响 Markdown 报告预览或后续 PDF 再生成。
+这些图表实际文件保存在 `outputs/charts/`，不应移动，否则可能影响 Markdown 报告预览或后续 PDF 再生成。
 
 ## 后续注意事项
 
 - 不应在公开仓库中新增临时 HTML、过程检查报告或旧版报告归档。
 - 如需重新生成 PDF，应先确认是否真的需要，并重新检查图片、分页和表格显示。
 - 本轮公开仓库清理不重新生成 PDF，也不重跑分析脚本。
-
